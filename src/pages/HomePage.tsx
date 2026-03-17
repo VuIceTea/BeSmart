@@ -1,52 +1,34 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './HomePage.css'
+import Header from '../components/Header'
 
 const HomePage = () => {
   const [showBubble, setShowBubble] = useState(false)
 
   return (
     <div className="home-page">
-      {/* Top Navigation */}
-      <header className="header">
-        <div className="header-left">
-          <div className="logo-icon">
-            <span className="material-symbols-outlined">school</span>
-          </div>
-          <h2 className="header-title">Hành Trình Tri Thức</h2>
-        </div>
-
-        <nav className="header-nav">
-          <a className="nav-link nav-link-active" href="#">
-            <span className="material-symbols-outlined">home</span>
-            Trang chủ
-          </a>
-          <a className="nav-link" href="#">
-            <span className="material-symbols-outlined">leaderboard</span>
-            Bảng xếp hạng
-          </a>
-          <a className="nav-link" href="#">
-            <span className="material-symbols-outlined">storefront</span>
-            Cửa hàng
-          </a>
-          <a className="nav-link" href="#">
-            <span className="material-symbols-outlined">family_restroom</span>
-            Bố mẹ
-          </a>
-        </nav>
-
-        <div className="header-actions">
-          <button className="profile-btn">
-            <div className="profile-avatar-small"></div>
-            <span className="profile-btn-text">Hồ sơ bé</span>
-          </button>
-          <button className="icon-btn">
-            <span className="material-symbols-outlined">notifications</span>
-          </button>
-          <button className="icon-btn">
-            <span className="material-symbols-outlined">settings</span>
-          </button>
-        </div>
-      </header>
+      <Header
+        navItems={[
+          { label: 'Trang chủ', icon: 'home', to: '/home' },
+          { label: 'Bảng xếp hạng', icon: 'leaderboard', href: '#' },
+          { label: 'Cửa hàng', icon: 'storefront', href: '#' },
+          { label: 'Bố mẹ', icon: 'family_restroom', href: '#' },
+        ]}
+        actions={
+          <>
+            <button className="profile-btn">
+              <div className="profile-avatar-small"></div>
+              <span className="profile-btn-text">Hồ sơ bé</span>
+            </button>
+            <button className="icon-btn">
+              <span className="material-symbols-outlined">notifications</span>
+            </button>
+            <button className="icon-btn">
+              <span className="material-symbols-outlined">settings</span>
+            </button>
+          </>
+        }
+      />
 
       {/* Main Content */}
       <main className="main-content adventure-path">
