@@ -1,0 +1,299 @@
+/* Reuse shared zalo-screen, zalo-avatar, zalo-post-*, zalo-bottom-nav from KhamPhaPage.css */
+@import './KhamPhaPage.css';
+
+/* ===================== NHẬT KÝ HEADER ===================== */
+.nk-header {
+  padding-bottom: 0 !important;
+}
+
+.nk-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 10px;
+}
+
+.nk-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nk-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nk-icon-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.nk-post-btn {
+  padding: 6px 18px;
+  background: white;
+  color: #0068ff;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.nk-post-btn:hover {
+  background: #e8f0fe;
+}
+
+/* ===================== TABS ===================== */
+.nk-tabs {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nk-tab {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.15s;
+}
+
+.nk-tab-active {
+  color: white;
+  border-bottom-color: white;
+}
+
+/* ===================== COMPOSE CARD ===================== */
+.nk-compose-card {
+  background: white;
+  margin-bottom: 8px;
+  padding: 14px 16px 0;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.nk-compose-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.nk-my-avatar {
+  flex-shrink: 0;
+}
+
+.nk-compose-input {
+  flex: 1;
+  font-size: 15px;
+  color: #999;
+  padding: 8px 14px;
+  background: #f0f2f5;
+  border-radius: 20px;
+  cursor: text;
+}
+
+.nk-compose-actions {
+  display: flex;
+  border-top: 1px solid #f0f0f0;
+}
+
+.nk-compose-action-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+  font-size: 12px;
+  color: #555;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.12s;
+}
+
+.nk-compose-action-btn span:first-child {
+  font-size: 20px;
+}
+
+.nk-compose-action-btn:hover {
+  background: #f5f6f7;
+}
+
+/* ===================== SECTION DIVIDER ===================== */
+.nk-section-divider {
+  padding: 8px 16px;
+  background: #f0f2f5;
+}
+
+.nk-section-divider span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ===================== POST OVERRIDES ===================== */
+.nk-post-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.nk-privacy-badge {
+  font-size: 11px;
+  color: #999;
+  background: #f0f2f5;
+  padding: 1px 7px;
+  border-radius: 8px;
+}
+
+.nk-more-btn {
+  font-size: 16px;
+  color: #aaa;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+/* Reactions Stack */
+.nk-reactions-stack {
+  display: inline-flex;
+  gap: -4px;
+  margin-right: 4px;
+}
+
+.nk-reaction-emoji {
+  font-size: 15px;
+  position: relative;
+  margin-right: -4px;
+}
+
+.nk-stat-right {
+  margin-left: auto;
+}
+
+/* ===================== VIDEO TAB ===================== */
+.nk-video-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
+  flex: 1;
+}
+
+.nk-video-card {
+  background: white;
+  overflow: hidden;
+}
+
+.nk-video-thumb-wrap {
+  position: relative;
+}
+
+.nk-video-thumb {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.nk-video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.nk-video-play-overlay:hover {
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.nk-video-play-btn {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #0068ff;
+  padding-left: 4px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nk-video-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.nk-video-info {
+  display: flex;
+  gap: 10px;
+  padding: 12px 14px;
+}
+
+.nk-video-avatar {
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.nk-video-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.nk-video-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 4px;
+  line-height: 1.4;
+}
+
+.nk-video-channel {
+  font-size: 12px;
+  color: #666;
+}
+
+.nk-video-views {
+  font-size: 12px;
+  color: #999;
+}

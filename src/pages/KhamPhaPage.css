@@ -1,0 +1,348 @@
+/* Zalo-like mobile layout */
+.zalo-screen {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  position: relative;
+  padding-bottom: 60px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================== HEADER ===================== */
+.zalo-header {
+  background: #0068ff;
+  padding: 12px 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.zalo-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.zalo-header-left {
+  flex: 1;
+}
+
+.zalo-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 7px 14px;
+  cursor: text;
+}
+
+.zalo-search-icon {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.zalo-search-placeholder {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.zalo-header-right {
+  display: flex;
+  gap: 6px;
+}
+
+.zalo-icon-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.zalo-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.zalo-page-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  padding: 0 2px;
+}
+
+/* ===================== CATEGORY CHIPS ===================== */
+.zalo-category-scroll {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px;
+  overflow-x: auto;
+  background: white;
+  border-bottom: 1px solid #e8eaed;
+  scrollbar-width: none;
+}
+
+.zalo-category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.zalo-category-chip {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1.5px solid #dde0e4;
+  background: white;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.zalo-category-chip:hover {
+  border-color: #0068ff;
+  color: #0068ff;
+}
+
+.zalo-category-chip-active {
+  background: #0068ff;
+  border-color: #0068ff;
+  color: white;
+}
+
+/* ===================== FEED ===================== */
+.zalo-feed {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+/* ===================== POST CARD ===================== */
+.zalo-post-card {
+  background: white;
+  padding: 14px 16px 0;
+}
+
+.zalo-post-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.zalo-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.zalo-post-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.zalo-post-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.zalo-post-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.zalo-follow-btn {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1.5px solid #0068ff;
+  background: transparent;
+  color: #0068ff;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.zalo-follow-btn:hover {
+  background: #0068ff;
+  color: white;
+}
+
+.zalo-follow-btn-following {
+  border-color: #aaa;
+  color: #666;
+  background: #f0f0f0;
+}
+
+.zalo-follow-btn-following:hover {
+  background: #e0e0e0;
+  border-color: #999;
+}
+
+.zalo-post-sub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zalo-post-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.zalo-post-time {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Content */
+.zalo-post-content {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #222;
+  margin: 0 0 12px;
+}
+
+/* Image */
+.zalo-post-image-wrap {
+  margin: 0 -16px 0;
+}
+
+.zalo-post-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Stats row */
+.zalo-post-stats {
+  display: flex;
+  gap: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.zalo-stat {
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.zalo-stat-emoji {
+  font-size: 14px;
+}
+
+/* Actions */
+.zalo-post-actions {
+  display: flex;
+  gap: 0;
+}
+
+.zalo-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.12s;
+}
+
+.zalo-action-btn:hover {
+  background: #f5f6f7;
+}
+
+.zalo-action-btn-liked {
+  color: #0068ff;
+  font-weight: 700;
+}
+
+/* ===================== BOTTOM NAV ===================== */
+.zalo-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  height: 58px;
+  background: white;
+  border-top: 1px solid #e8eaed;
+  display: flex;
+  align-items: center;
+  z-index: 200;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.zalo-nav-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 6px 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.12s;
+  color: #888;
+}
+
+.zalo-nav-tab:hover {
+  background: #f5f6f7;
+}
+
+.zalo-nav-tab-active {
+  color: #0068ff;
+}
+
+.zalo-nav-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.zalo-nav-label {
+  font-size: 10px;
+  font-weight: 500;
+}

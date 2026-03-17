@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './LessonPage.css'
+import Header from '../components/Header'
 
 const ANSWERS = [1, 2, 3]
 const CORRECT_ANSWER = 3
@@ -27,32 +28,23 @@ const LessonPage = () => {
 
   return (
     <div className="lesson-page">
-      {/* Header */}
-      <header className="lesson-header">
-        <div className="lesson-header-inner">
-          <div className="lesson-header-left">
-            <div className="lesson-logo">
-              <span className="material-symbols-outlined">school</span>
-            </div>
-            <h1 className="lesson-header-title">Toán học Vui nhộn</h1>
-          </div>
-
-          <nav className="lesson-nav">
-            <a className="lesson-nav-link" href="#">Trang chủ</a>
-            <a className="lesson-nav-link lesson-nav-link-active" href="#">Bài học</a>
-            <a className="lesson-nav-link" href="#">Thành tích</a>
-            <a className="lesson-nav-link" href="#">Hồ sơ</a>
-          </nav>
-
-          <div className="lesson-header-actions">
+      <Header
+        navItems={[
+          { label: 'Trang chủ', to: '/home' },
+          { label: 'Bài học', to: '/lesson' },
+          { label: 'Thành tích', href: '#' },
+          { label: 'Hồ sơ', href: '#' },
+        ]}
+        actions={
+          <>
             <button className="lesson-logout-btn">
               <span className="material-symbols-outlined">logout</span>
               <span className="lesson-logout-text">Đăng xuất</span>
             </button>
             <div className="lesson-avatar"></div>
-          </div>
-        </div>
-      </header>
+          </>
+        }
+      />
 
       {/* Main */}
       <main className="lesson-main">

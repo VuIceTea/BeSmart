@@ -1,0 +1,114 @@
+/* ===================== SHARED HEADER ===================== */
+.shared-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e6e2db;
+  padding: 0.875rem 1.5rem 0.875rem 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.shared-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.shared-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.shared-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.shared-logo-img {
+  height: 4rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.shared-header-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: #0f172a;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .shared-header-title {
+    display: block;
+  }
+}
+
+/* ===================== NAV ===================== */
+.shared-nav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .shared-nav {
+    display: flex;
+  }
+}
+
+.shared-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Lexend", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.shared-nav-link:hover {
+  color: #f5b13d;
+}
+
+.shared-nav-link .material-symbols-outlined {
+  font-size: 1.25rem;
+}
+
+.shared-nav-link-active {
+  color: #f5b13d;
+  font-weight: 700;
+  background: #fff7ed;
+  padding: 0.5rem 1rem;
+}
+
+.shared-nav-link-active:hover {
+  color: #f5b13d;
+}
+
+/* ===================== ACTIONS ===================== */
+.shared-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
